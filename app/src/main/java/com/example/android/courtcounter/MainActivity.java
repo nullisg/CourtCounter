@@ -9,7 +9,8 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    int scoreTeamA, scoreTeamB;
+    int scoreTeamA;
+    int scoreTeamB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,10 +95,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateScores(){
-        TextView teamAScoreText = (TextView) findViewById(R.id.team_a_score);
+        TextView teamAScoreText = findViewById(R.id.team_a_score);
         teamAScoreText.setText(Integer.toString(scoreTeamA));
 
-        TextView teamBScoreText = (TextView) findViewById(R.id.team_b_score);
+        TextView teamBScoreText = findViewById(R.id.team_b_score);
         teamBScoreText.setText(Integer.toString(scoreTeamB));
     }
 }
